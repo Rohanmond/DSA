@@ -2,12 +2,9 @@
 using namespace std;
 int joinRopes(vector<int> &v)
 {
-    priority_queue<int, vector<int>, greater<int>> pq;
+    priority_queue<int, vector<int>, greater<int>> pq(v.begin(), v.end());
     int res = 0;
-    for (int i = 0; i < v.size(); i++)
-    {
-        pq.push(v[i]);
-    }
+
     while (true)
     {
         //     if (pq.empty())
